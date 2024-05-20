@@ -1,1 +1,1 @@
-D:\Explore\learnrust\basic\target\debug\basic.exe: D:\Explore\learnrust\basic\src\main.rs
+D:\Project\learn\rust\learnrust\basic\target\debug\basic.exe: D:\Project\learn\rust\learnrust\basic\src\main.rs

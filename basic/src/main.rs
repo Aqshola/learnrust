@@ -1,9 +1,19 @@
+use std::any::Any;
+
 fn main() {
     // learn_part_one();
     // learn_part_two();
     // learn_part_three();
 
-    learn_part_four();
+    // learn_part_four();
+
+    // learn_part_five();
+
+    // learn_part_six();
+
+    // learn_part_seven();
+
+    learn_part_eight();
 
 }
 
@@ -91,25 +101,103 @@ fn main() {
 // }
 
 
-fn learn_part_four(){
-    let mut s=String::from("Sasageyo");
-    s.push_str("Shinzou");
+// fn learn_part_four(){
+//     let mut s=String::from("Sasageyo");
+//     s.push_str("Shinzou");
 
-    println!("{s}");
+//     println!("{s}");
 
-    let x=String::from("valueone");
-    let _y=x;
+//     let x=String::from("valueone");
+//     let _y=x;
 
-    // println!("{x}");
+//     // println!("{x}");
 
-    let tes_owner=String::from("Hellow");
+//     let tes_owner=String::from("Hellow");
 
-    takes_ownershop(tes_owner);
+//     takes_ownershop(tes_owner);
 
-    let tes_copy=5;
-    makes_copy(tes_copy);
+//     let tes_copy=5;
+//     makes_copy(tes_copy);
 
     
+// }
+
+// fn learn_part_five(){
+//     let mut s1=String::from("lalatina");
+//     change_str(&mut s1);
+
+//     let len=calculate_length_str(&s1);
+//     println!("The length of {} is {}",s1, len);
+// }
+
+
+// fn learn_part_six(){
+//     let str=String::from("Hello World");
+//     let len_str=str.len();
+//     let part_one=&str[0..len_str];
+
+//     println!("Part One : {}",part_one);
+// }
+// #[derive(Debug)]
+// struct User{
+//     name: String,
+//     age: u32,
+// }
+
+// impl User{
+//     fn get_name(&self)->&String{
+//         &self.name
+//     }
+// } 
+
+
+
+// fn learn_part_seven(){
+//     let new_user=User{
+//         age:20,
+//         name:String::from("Ereh"),
+//     };
+
+
+//     let user_name=new_user.get_name();
+//     println!("The name is {} with age {}", new_user.name,new_user.age);
+//     println!("Struct user is {:?}",new_user);
+
+//     println!("Get name result : {}",user_name);
+// }
+
+
+#[derive(Debug)]
+enum IpAddrKind{
+    V4,
+    V6
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+
+fn learn_part_eight(){
+    let ip_four=IpAddrKind::V4;
+    let ip_six=IpAddrKind::V6;
+
+    println!("IPFOUR {:?} and IPSIX {:?}",ip_four.type_id(),ip_six);
+
+    value_in_cents(Coin::Nickel);
+
+
 }
 
 
@@ -124,14 +212,24 @@ fn learn_part_four(){
 
 
 // //LEARNING FUNCTION
+
+// fn calculate_length_str(str:&String)-> usize{
+//     str.len()
+// }
+
+// fn change_str(str:&mut String){
+//     str.push_str(" Lalatina ");
+// }
+
+
 // fn another_function(x:i32){
 //     println!("Value of Parameter x is {x}")
 // }
 
-fn takes_ownershop(some_string:String){
-    println!("{}",some_string)
-}
+// fn takes_ownershop(some_string:String){
+//     println!("{}",some_string)
+// }
 
-fn makes_copy(some_integer:i32){
-    println!("{}",some_integer)
-}
+// fn makes_copy(some_integer:i32){
+//     println!("{}",some_integer)
+// }
